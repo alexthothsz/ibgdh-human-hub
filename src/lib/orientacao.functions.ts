@@ -15,7 +15,7 @@ const orientacaoSchema = z.object({
 export type OrientacaoInput = z.infer<typeof orientacaoSchema>;
 
 export const enviarOrientacao = createServerFn({ method: "POST" })
-  .inputValidator((data) => orientacaoSchema.parse(data))
+  .validator((data) => orientacaoSchema.parse(data))
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
