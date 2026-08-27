@@ -247,7 +247,7 @@ function Index() {
           <div className="grid lg:grid-cols-2">
             <div className="relative aspect-[4/3] lg:aspect-auto">
               <img
-                src={brinvestImg}
+                src="/images/brinvest.jpg"
                 alt="Ilustração de trabalhador segurando moedas com planta crescendo, simbolizando educação financeira e investimento"
                 width={1024}
                 height={768}
