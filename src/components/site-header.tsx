@@ -83,13 +83,13 @@ function DesktopDropdown({ item }: { item: NavItem }) {
       {open && (
         <div className="absolute left-0 top-full z-50 min-w-64 rounded-lg border border-border bg-popover py-2 shadow-lg">
           {item.children!.map((child) => (
-            <a
+            <Link
               key={child.href}
-              href={child.href}
+              to={child.href}
               className="block px-4 py-2.5 text-sm text-popover-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
             >
               {child.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
@@ -123,24 +123,24 @@ export function SiteHeader() {
             item.children ? (
               <DesktopDropdown key={item.label} item={item} />
             ) : (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href!}
                 className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
               >
                 {item.label}
-              </a>
+              </Link>
             ),
           )}
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href="/contato"
+          <Link
+            to="/contato"
             className="hidden rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:brightness-95 focus-visible:outline-2 focus-visible:outline-ring sm:inline-flex"
           >
             Solicite Orientação
-          </a>
+          </Link>
 
           {/* Mobile hamburger */}
           <button
@@ -183,36 +183,36 @@ export function SiteHeader() {
                 {expanded === item.label && (
                   <div className="pb-3 pl-3">
                     {item.children.map((child) => (
-                      <a
+                      <Link
                         key={child.href}
-                        href={child.href}
+                        to={child.href}
                         className="block rounded-md py-2.5 pl-3 text-sm text-muted-foreground hover:bg-secondary hover:text-primary"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ) : (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href!}
                 className="block border-b border-border/60 py-3 text-base font-medium text-foreground last:border-0"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ),
           )}
-          <a
-            href="/contato"
+          <Link
+            to="/contato"
             className="mt-4 flex w-full items-center justify-center rounded-lg bg-accent px-4 py-3 text-base font-semibold text-accent-foreground"
             onClick={() => setMobileOpen(false)}
           >
             Solicite Orientação
-          </a>
+          </Link>
         </nav>
       )}
     </header>
