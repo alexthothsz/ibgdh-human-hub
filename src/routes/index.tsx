@@ -188,7 +188,7 @@ function Index() {
           </div>
           <div className="order-1 lg:order-2">
             <img
-              src={quemSomosImg}
+              src="/images/quem-somos.jpg"
               alt="Ilustração de um grupo diverso de pessoas representando inclusão e direitos humanos"
               width={1024}
               height={768}
