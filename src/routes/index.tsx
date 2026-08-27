@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
-  BookOpen,
   Building2,
   GraduationCap,
   HeartHandshake,
@@ -9,9 +8,6 @@ import {
   Search,
   TrendingUp,
 } from "lucide-react";
-
-import quemSomosImg from "/public/images/quem-somos.jpg";
-import brinvestImg from "/public/images/brinvest.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
