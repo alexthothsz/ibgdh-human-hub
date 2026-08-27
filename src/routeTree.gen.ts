@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as DireitosEServicosRouteImport } from './routes/direitos-e-servicos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DireitosEServicosRoute = DireitosEServicosRouteImport.update({
@@ -25,27 +31,31 @@ const DireitosEServicosRoute = DireitosEServicosRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/direitos-e-servicos'
+  fullPaths: '/' | '/contato' | '/direitos-e-servicos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/direitos-e-servicos'
-  id: '__root__' | '/' | '/direitos-e-servicos'
+  to: '/' | '/contato' | '/direitos-e-servicos'
+  id: '__root__' | '/' | '/contato' | '/direitos-e-servicos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
   DireitosEServicosRoute: typeof DireitosEServicosRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/direitos-e-servicos': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
   DireitosEServicosRoute: DireitosEServicosRoute,
 }
 export const routeTree = rootRouteImport
