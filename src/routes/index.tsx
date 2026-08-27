@@ -37,7 +37,7 @@ const PILLARS = [
     title: "Justiça e Direitos",
     description:
       "Assistência jurídica e acesso à justiça para garantir que todos tenham seus direitos respeitados.",
-    href: "/direitos-e-servicos/assessoria-juridica",
+    href: "/direitos-e-servicos#assessoria-juridica",
   },
   {
     icon: GraduationCap,
@@ -58,7 +58,7 @@ const PILLARS = [
     title: "Inclusão e Diversidade",
     description:
       "Defesa dos direitos das pessoas com deficiência e grupos vulneráveis para uma sociedade mais inclusiva.",
-    href: "/direitos-e-servicos/pessoas-com-deficiencia",
+    href: "/direitos-e-servicos#pessoas-com-deficiencia",
   },
   {
     icon: TrendingUp,

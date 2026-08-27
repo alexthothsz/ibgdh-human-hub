@@ -9,8 +9,9 @@ const QUICK_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  { label: "Pessoas com Deficiência", href: "/direitos-e-servicos/pessoas-com-deficiencia" },
-  { label: "Assessoria Jurídica", href: "/direitos-e-servicos/assessoria-juridica" },
+  { label: "Direitos e Serviços", href: "/direitos-e-servicos" },
+  { label: "Pessoas com Deficiência", href: "/direitos-e-servicos#pessoas-com-deficiencia" },
+  { label: "Assessoria Jurídica", href: "/direitos-e-servicos#assessoria-juridica" },
   { label: "Projetos Sociais", href: "/direitos-e-servicos/projetos-sociais" },
   { label: "Cursos", href: "/escola/cursos" },
   { label: "Eventos", href: "/escola/eventos" },
