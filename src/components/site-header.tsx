@@ -22,9 +22,11 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Direitos e Serviços",
+    href: "/direitos-e-servicos",
     children: [
-      { label: "Pessoas com Deficiência", href: "/direitos-e-servicos/pessoas-com-deficiencia" },
-      { label: "Assessoria Jurídica", href: "/direitos-e-servicos/assessoria-juridica" },
+      { label: "Visão Geral", href: "/direitos-e-servicos" },
+      { label: "Pessoas com Deficiência", href: "/direitos-e-servicos#pessoas-com-deficiencia" },
+      { label: "Assessoria Jurídica", href: "/direitos-e-servicos#assessoria-juridica" },
       { label: "Projetos Sociais", href: "/direitos-e-servicos/projetos-sociais" },
     ],
   },
