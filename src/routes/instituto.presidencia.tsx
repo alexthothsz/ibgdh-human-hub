@@ -8,7 +8,7 @@ import {
   Scale,
 } from "lucide-react";
 
-import presidenteImgAsset from "../../assets/presidente-fabio.jpg.asset.json";
+import presidenteImgAsset from "../assets/presidente-fabio.jpg.asset.json";
 import heroPresidencia from "../../public/images/hero-presidencia.jpg";
 
 const presidenteImg = presidenteImgAsset.url;
