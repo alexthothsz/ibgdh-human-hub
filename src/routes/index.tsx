@@ -44,14 +44,14 @@ const PILLARS = [
     title: "Educação e Formação",
     description:
       "Cursos, capacitação e formação cidadã para fortalecer uma sociedade mais consciente de seus direitos.",
-    href: "/escola/cursos",
+    href: "/cursos",
   },
   {
     icon: Search,
     title: "Pesquisa e Conhecimento",
     description:
       "Produção científica e estudos técnicos que subsidiam políticas públicas e ações em direitos humanos.",
-    href: "/conhecimento/pesquisas",
+    href: "/artigos",
   },
   {
     icon: HeartHandshake,
@@ -82,21 +82,21 @@ const ARTICLES = [
     excerpt:
       "Entenda como a acessibilidade vai além de rampas e elevadores e se configura como condição essencial para a cidadania.",
     category: "Direitos das PCDs",
-    href: "/conhecimento/artigos/acessibilidade-direito-fundamental",
+    href: "/artigos",
   },
   {
     title: "Educação financeira para inclusão produtiva",
     excerpt:
       "Como a educação financeira pode transformar a realidade de trabalhadores e suas famílias, promovendo autonomia.",
     category: "Cidadania Econômica",
-    href: "/conhecimento/artigos/educacao-financeira-inclusao-produtiva",
+    href: "/artigos",
   },
   {
     title: "Controle social e políticas públicas",
     excerpt:
       "A participação da sociedade na formulação, implementação e fiscalização de políticas públicas de direitos humanos.",
     category: "Fortalecimento Institucional",
-    href: "/conhecimento/artigos/controle-social-politicas-publicas",
+    href: "/artigos",
   },
 ];
 
@@ -297,7 +297,7 @@ function Index() {
                 Últimos Artigos
               </h2>
             </div>
-            <Button to="/conhecimento/artigos" variant="secondary">
+            <Button to="/artigos" variant="secondary">
               Ver Portal de Conhecimento
               <ArrowRight className="size-4" aria-hidden="true" />
             </Button>

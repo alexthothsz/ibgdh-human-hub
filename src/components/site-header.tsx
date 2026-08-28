@@ -33,16 +33,16 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Conhecimento",
     children: [
-      { label: "Artigos", href: "/conhecimento/artigos" },
-      { label: "Pesquisas", href: "/conhecimento/pesquisas" },
-      { label: "Publicações", href: "/conhecimento/publicacoes" },
+      { label: "Artigos", href: "/artigos" },
+      { label: "Pesquisas", href: "/artigos" },
+      { label: "Publicações", href: "/artigos" },
     ],
   },
   {
     label: "Escola IBGDH",
     children: [
-      { label: "Cursos", href: "/escola/cursos" },
-      { label: "Eventos", href: "/escola/eventos" },
+      { label: "Cursos", href: "/cursos" },
+      { label: "Eventos", href: "/cursos" },
     ],
   },
   { label: "Contato", href: "/contato" },
