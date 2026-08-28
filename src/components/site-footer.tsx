@@ -13,14 +13,14 @@ const SERVICE_LINKS = [
   { label: "Pessoas com Deficiência", href: "/direitos-e-servicos#pessoas-com-deficiencia" },
   { label: "Assessoria Jurídica", href: "/direitos-e-servicos#assessoria-juridica" },
   { label: "Projetos Sociais", href: "/direitos-e-servicos/projetos-sociais" },
-  { label: "Cursos", href: "/escola/cursos" },
-  { label: "Eventos", href: "/escola/eventos" },
+  { label: "Cursos", href: "/cursos" },
+  { label: "Eventos", href: "/cursos" },
 ];
 
 const KNOWLEDGE_LINKS = [
-  { label: "Artigos", href: "/conhecimento/artigos" },
-  { label: "Pesquisas", href: "/conhecimento/pesquisas" },
-  { label: "Publicações", href: "/conhecimento/publicacoes" },
+  { label: "Artigos", href: "/artigos" },
+  { label: "Pesquisas", href: "/artigos" },
+  { label: "Publicações", href: "/artigos" },
   { label: "Contato", href: "/contato" },
 ];
 
