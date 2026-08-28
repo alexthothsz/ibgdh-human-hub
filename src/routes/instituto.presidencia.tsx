@@ -170,7 +170,7 @@ function PresidenciaPage() {
               />
               <div className="border-t border-border p-6">
                 <p className="text-lg font-bold text-foreground">
-                  Dr. Alexandre Silva de Souza
+                  Dr. Fábio Jorge Dantas de Sousa
                 </p>
                 <p className="text-sm font-medium text-primary">
                   Presidente do IBGDH | Doutorando em Direito (Salamanca) |
