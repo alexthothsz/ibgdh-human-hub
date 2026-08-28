@@ -14,6 +14,7 @@ import { Route as ArtigosRouteImport } from './routes/artigos'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CursosRouteImport } from './routes/cursos'
 import { Route as DireitosEServicosRouteImport } from './routes/direitos-e-servicos'
+import { Route as InstitutoPresidenciaRouteImport } from './routes/instituto.presidencia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +41,11 @@ const DireitosEServicosRoute = DireitosEServicosRouteImport.update({
   path: '/direitos-e-servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InstitutoPresidenciaRoute = InstitutoPresidenciaRouteImport.update({
+  id: '/instituto/presidencia',
+  path: '/instituto/presidencia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
+  '/instituto/presidencia': typeof InstitutoPresidenciaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
+  '/instituto/presidencia': typeof InstitutoPresidenciaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,12 +70,25 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
+  '/instituto/presidencia': typeof InstitutoPresidenciaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/artigos' | '/contato' | '/cursos' | '/direitos-e-servicos'
+  fullPaths:
+    | '/'
+    | '/artigos'
+    | '/contato'
+    | '/cursos'
+    | '/direitos-e-servicos'
+    | '/instituto/presidencia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/artigos' | '/contato' | '/cursos' | '/direitos-e-servicos'
+  to:
+    | '/'
+    | '/artigos'
+    | '/contato'
+    | '/cursos'
+    | '/direitos-e-servicos'
+    | '/instituto/presidencia'
   id:
     | '__root__'
     | '/'
@@ -75,6 +96,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/cursos'
     | '/direitos-e-servicos'
+    | '/instituto/presidencia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -83,6 +105,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   CursosRoute: typeof CursosRoute
   DireitosEServicosRoute: typeof DireitosEServicosRoute
+  InstitutoPresidenciaRoute: typeof InstitutoPresidenciaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -122,6 +145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DireitosEServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/instituto/presidencia': {
+      id: '/instituto/presidencia'
+      path: '/instituto/presidencia'
+      fullPath: '/instituto/presidencia'
+      preLoaderRoute: typeof InstitutoPresidenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -131,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   CursosRoute: CursosRoute,
   DireitosEServicosRoute: DireitosEServicosRoute,
+  InstitutoPresidenciaRoute: InstitutoPresidenciaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

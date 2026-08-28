@@ -15,6 +15,7 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "Quem Somos", href: "/instituto/quem-somos" },
       { label: "Missão, Visão e Valores", href: "/instituto/missao-visao-valores" },
+      { label: "Presidência", href: "/instituto/presidencia" },
       { label: "Diretoria", href: "/instituto/diretoria" },
       { label: "Patrono", href: "/instituto/patrono" },
       { label: "Parceiros", href: "/instituto/parceiros" },
