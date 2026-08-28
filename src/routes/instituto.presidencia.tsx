@@ -140,7 +140,7 @@ function PresidenciaPage() {
             </p>
             <footer className="mt-8">
               <p className="text-base font-semibold text-primary">
-                Dr. Alexandre Silva de Souza
+                Dr. Fábio Jorge Dantas de Sousa
               </p>
               <p className="text-sm text-muted-foreground">
                 Presidente do IBGDH
