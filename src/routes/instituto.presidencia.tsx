@@ -8,8 +8,10 @@ import {
   Scale,
 } from "lucide-react";
 
-import presidenteImg from "../../public/images/presidente.jpg";
+import presidenteImgAsset from "../assets/presidente-fabio.jpg.asset.json";
 import heroPresidencia from "../../public/images/hero-presidencia.jpg";
+
+const presidenteImg = presidenteImgAsset.url;
 
 export const Route = createFileRoute("/instituto/presidencia")({
   head: () => ({
@@ -30,11 +32,11 @@ export const Route = createFileRoute("/instituto/presidencia")({
       { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:image",
-        content: "https://ibgdh-human-hub.lovable.app/images/presidente.jpg",
+        content: "https://ibgdh-human-hub.lovable.app/__l5e/assets-v1/2c5727a8-f304-4ecb-8040-24024fcad4c5/presidente-fabio.jpg",
       },
       {
         name: "twitter:image",
-        content: "https://ibgdh-human-hub.lovable.app/images/presidente.jpg",
+        content: "https://ibgdh-human-hub.lovable.app/__l5e/assets-v1/2c5727a8-f304-4ecb-8040-24024fcad4c5/presidente-fabio.jpg",
       },
     ],
   }),
@@ -138,7 +140,7 @@ function PresidenciaPage() {
             </p>
             <footer className="mt-8">
               <p className="text-base font-semibold text-primary">
-                Dr. Alexandre Silva de Souza
+                Dr. Fábio Jorge Dantas de Sousa
               </p>
               <p className="text-sm text-muted-foreground">
                 Presidente do IBGDH
@@ -168,7 +170,7 @@ function PresidenciaPage() {
               />
               <div className="border-t border-border p-6">
                 <p className="text-lg font-bold text-foreground">
-                  Dr. Alexandre Silva de Souza
+                  Dr. Fábio Jorge Dantas de Sousa
                 </p>
                 <p className="text-sm font-medium text-primary">
                   Presidente do IBGDH | Doutorando em Direito (Salamanca) |
