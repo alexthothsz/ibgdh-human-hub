@@ -1,5 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDown, Quote } from "lucide-react";
+import {
+  ArrowDown,
+  Building2,
+  GraduationCap,
+  HeartHandshake,
+  Quote,
+  Scale,
+} from "lucide-react";
 
 import presidenteImg from "../../public/images/presidente.jpg";
 import heroPresidencia from "../../public/images/hero-presidencia.jpg";
@@ -11,13 +18,13 @@ export const Route = createFileRoute("/instituto/presidencia")({
       {
         name: "description",
         content:
-          "Conheça a liderança do IBGDH: trajetória, compromisso acadêmico e visão institucional da presidência do Instituto Brasil Global de Direitos Humanos.",
+          "Conheça a liderança do IBGDH: trajetória acadêmica, gestão pública e compromisso social do presidente do Instituto Brasil Global de Direitos Humanos.",
       },
       { property: "og:title", content: "Presidência — IBGDH" },
       {
         property: "og:description",
         content:
-          "Liderança, compromisso e transformação social na condução do Instituto Brasil Global de Direitos Humanos.",
+          "Liderança, rigor científico e compromisso social na condução do Instituto Brasil Global de Direitos Humanos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -34,6 +41,49 @@ export const Route = createFileRoute("/instituto/presidencia")({
   component: PresidenciaPage,
 });
 
+const PILARES = [
+  {
+    icon: GraduationCap,
+    title: "Formação & Pesquisa",
+    items: [
+      "Doutorado na Universidade de Salamanca",
+      "Mestrado na Universidade Portucalense",
+      "Pós-graduação na PUC-Rio",
+      "Pesquisador FAPERJ",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Gestão Pública",
+    items: [
+      "Ex-Subsecretário-Geral da Casa Civil/RJ",
+      "GSI-RJ e PGE-RJ",
+      "Ex-Secretário de Meio Ambiente de Búzios",
+      "Procurador Municipal",
+    ],
+  },
+  {
+    icon: Scale,
+    title: "Advocacia & Entidades",
+    items: [
+      "Membro Efetivo do IAB",
+      "Escritório Evaristo de Moraes",
+      "Escritório Villemor Amaral",
+      "Fundação Bio-Rio",
+    ],
+  },
+  {
+    icon: HeartHandshake,
+    title: "Direitos Humanos & Impacto",
+    items: [
+      "Advogado da EDUCAFRO Brasil",
+      "Fundador e Presidente do IBGDH",
+      "Atuação em inclusão e cidadania",
+      "Projeto BRINVEST e educação financeira",
+    ],
+  },
+];
+
 function PresidenciaPage() {
   return (
     <main className="overflow-hidden">
@@ -49,7 +99,7 @@ function PresidenciaPage() {
             Instituto Brasil Global de Direitos Humanos
           </p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
-            Liderança, Compromisso e Transformação Social
+            Liderança, Rigor Científico e Compromisso Social
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-primary-foreground/85">
             Conheça a trajetória, os pilares acadêmicos e a visão institucional
@@ -73,7 +123,7 @@ function PresidenciaPage() {
         </div>
       </section>
 
-      {/* Mensagem do Presidente */}
+      {/* Citação Principal */}
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:py-20">
         <div className="relative rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-12">
           <Quote
@@ -82,11 +132,9 @@ function PresidenciaPage() {
           />
           <blockquote className="relative z-10 pt-8 text-center">
             <p className="text-xl font-medium leading-relaxed text-card-foreground sm:text-2xl">
-              “O IBGDH nasceu do sonho de aproximar o Direito e os Direitos
-              Humanos da vida real das pessoas. Nossa missão é transformar
-              conhecimento em ação, garantindo que cada cidadão — especialmente
-              aqueles em situação de vulnerabilidade — tenha voz, acesso à
-              justiça e condições de exercer plenamente sua cidadania.”
+              “O Estado Social de Direito só se realiza plenamente quando o
+              conhecimento científico e a justiça alcançam a vida de cada
+              cidadão.”
             </p>
             <footer className="mt-8">
               <p className="text-base font-semibold text-primary">
@@ -123,26 +171,32 @@ function PresidenciaPage() {
                   Dr. Alexandre Silva de Souza
                 </p>
                 <p className="text-sm font-medium text-primary">
-                  Presidente do IBGDH
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Advogado, pesquisador e ativista em Direitos Humanos
+                  Presidente do IBGDH | Doutorando em Direito (Salamanca) |
+                  Membro Efetivo do IAB
                 </p>
               </div>
             </div>
-            <a
-              href="#"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:brightness-95 focus-visible:outline-2 focus-visible:outline-ring"
-              onClick={(e) => {
-                e.preventDefault();
-                alert(
-                  "O currículo completo será disponibilizado em breve. Entre em contato conosco para mais informações.",
-                );
-              }}
-            >
-              <ArrowDown className="size-4" aria-hidden="true" />
-              Baixar Currículo Completo
-            </a>
+            <div className="mt-6 flex w-full flex-col gap-3 sm:flex-row">
+              <a
+                href="#"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-sm transition-all hover:brightness-95 focus-visible:outline-2 focus-visible:outline-ring"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert(
+                    "O currículo completo será disponibilizado em breve. Entre em contato conosco para mais informações.",
+                  );
+                }}
+              >
+                <ArrowDown className="size-4" aria-hidden="true" />
+                Baixar Currículo Completo
+              </a>
+              <Link
+                to="/contato"
+                className="inline-flex flex-1 items-center justify-center rounded-lg border border-primary bg-transparent px-6 py-3 text-base font-semibold text-primary shadow-sm transition-all hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-ring"
+              >
+                Solicitar Agenda Institucional
+              </Link>
+            </div>
           </div>
 
           {/* Coluna Direita — Texto */}
@@ -161,52 +215,91 @@ function PresidenciaPage() {
                 A formação acadêmica do presidente do IBGDH consolidou-se ao
                 longo de mais de duas décadas dedicadas ao estudo aprofundado do
                 Direito Constitucional, da Teoria dos Direitos Humanos e da
-                relação entre Estado, cidadania e políticas públicas. Graduado em
-                Direito, mestre e doutor em áreas afins, construiu uma sólida
-                trajetória que une a rigorosidade da pesquisa científica à
-                prática transformadora da assistência jurídica e do advocacy
-                social.
+                relação entre Estado, cidadania e políticas públicas. Doutorando
+                em Direito pela Universidade de Salamanca, mestre pela
+                Universidade Portucalense e pós-graduado pela PUC-Rio, construiu
+                uma sólida trajetória que une a rigorosidade da pesquisa
+                científica à prática transformadora da gestão pública e do
+                advocacy social.
               </p>
               <p>
-                Em sua atuação profissional, destaca-se a coordenação de
-                projetos de inclusão e fortalecimento institucional voltados a
-                pessoas com deficiência, trabalhadores em situação de
-                vulnerabilidade econômica e organizações da sociedade civil. A
-                experiência em assessoria jurídica previdenciária, saúde e
-                assistência social permitiu desenvolver uma metodologia própria
-                de atendimento, pautada na escuta, na dignidade humana e na
-                busca efetiva de soluções.
+                Na gestão pública, acumulou experiências estratégicas como
+                Subsecretário-Geral da Casa Civil do Estado do Rio de Janeiro,
+                integrando o Gabinete de Segurança Institucional (GSI-RJ) e a
+                Procuradoria-Geral do Estado (PGE-RJ). Também exerceu o cargo de
+                Secretário de Meio Ambiente de Búzios e atuou como Procurador
+                Municipal, desenvolvendo uma visão integrada entre direito,
+                políticas públicas e desenvolvimento sustentável voltado ao
+                interesse coletivo.
               </p>
               <p>
-                O compromisso social na fundação e condução do IBGDH reflete a
-                convicção de que os direitos humanos só se realizam quando
-                chegam ao cotidiano das famílias brasileiras. Sob sua
-                liderança, o Instituto Brasil Global de Direitos Humanos
-                articula educação, pesquisa, assistência técnica e projetos
-                sociais para ampliar o acesso à justiça, promover a cidadania
-                econômica e fortalecer o controle social, sempre com o olhar
-                atento às demandas de quem mais precisa.
+                Na advocacia e na sociedade civil, é Membro Efetivo do Instituto
+                dos Advogados Brasileiros (IAB), passou por escritórios de
+                referência como Evaristo de Moraes e Villemor Amaral, e colaborou
+                com a Fundação Bio-Rio. Como advogado da EDUCAFRO Brasil e
+                pesquisador da FAPERJ, dedicou-se à inclusão social, ao acesso à
+                justiça e à cidadania econômica. Essa trajetória culminou na
+                fundação e condução do IBGDH, onde articula educação, pesquisa,
+                assessoria jurídica e projetos sociais para ampliar o acesso à
+                justiça e fortalecer o controle social no Brasil.
               </p>
-            </div>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-xl border border-border bg-card p-4 text-center shadow-sm">
-                <p className="text-2xl font-bold text-primary">20+</p>
-                <p className="text-sm text-muted-foreground">
-                  Anos de experiência
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-card p-4 text-center shadow-sm">
-                <p className="text-2xl font-bold text-primary">Doutor</p>
-                <p className="text-sm text-muted-foreground">
-                  Formação acadêmica
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-card p-4 text-center shadow-sm">
-                <p className="text-2xl font-bold text-primary">BR</p>
-                <p className="text-sm text-muted-foreground">Atuação nacional</p>
-              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Pilares da Trajetória */}
+      <section
+        className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24"
+        aria-labelledby="pilares-heading"
+      >
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+            Pilares da Trajetória
+          </p>
+          <h2
+            id="pilares-heading"
+            className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+          >
+            Formação, Gestão e Impacto Social
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
+            Quatro dimensões que estruturam a atuação do presidente do IBGDH e
+            guiam a missão institucional.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {PILARES.map((pilar) => {
+            const Icon = pilar.icon;
+            return (
+              <div
+                key={pilar.title}
+                className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="size-6" aria-hidden="true" />
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-card-foreground">
+                  {pilar.title}
+                </h3>
+                <ul className="mt-4 space-y-2">
+                  {pilar.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <span
+                        className="mt-1.5 size-1.5 shrink-0 rounded-full bg-primary"
+                        aria-hidden="true"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </section>
 
