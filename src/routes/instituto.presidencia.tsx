@@ -8,8 +8,10 @@ import {
   Scale,
 } from "lucide-react";
 
-import presidenteImg from "../../public/images/presidente.jpg";
+import presidenteImgAsset from "../../assets/presidente-fabio.jpg.asset.json";
 import heroPresidencia from "../../public/images/hero-presidencia.jpg";
+
+const presidenteImg = presidenteImgAsset.url;
 
 export const Route = createFileRoute("/instituto/presidencia")({
   head: () => ({
