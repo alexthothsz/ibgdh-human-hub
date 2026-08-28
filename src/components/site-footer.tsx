@@ -4,6 +4,7 @@ const QUICK_LINKS = [
   { label: "Início", href: "/" },
   { label: "Quem Somos", href: "/instituto/quem-somos" },
   { label: "Missão, Visão e Valores", href: "/instituto/missao-visao-valores" },
+  { label: "Presidência", href: "/instituto/presidencia" },
   { label: "Diretoria", href: "/instituto/diretoria" },
   { label: "Parceiros", href: "/instituto/parceiros" },
 ];
