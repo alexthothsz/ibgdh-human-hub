@@ -32,11 +32,11 @@ export const Route = createFileRoute("/instituto/presidencia")({
       { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:image",
-        content: "https://ibgdh-human-hub.lovable.app/images/presidente.jpg",
+        content: "https://ibgdh-human-hub.lovable.app/__l5e/assets-v1/2c5727a8-f304-4ecb-8040-24024fcad4c5/presidente-fabio.jpg",
       },
       {
         name: "twitter:image",
-        content: "https://ibgdh-human-hub.lovable.app/images/presidente.jpg",
+        content: "https://ibgdh-human-hub.lovable.app/__l5e/assets-v1/2c5727a8-f304-4ecb-8040-24024fcad4c5/presidente-fabio.jpg",
       },
     ],
   }),
