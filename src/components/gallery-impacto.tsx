@@ -145,11 +145,11 @@ export function GalleryImpacto() {
         </div>
       </div>
 
-      {selected !== null && (
+      {selected !== null && ITEMS[selected] && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={ITEMS[selected].caption}
+          aria-label={ITEMS[selected]!.caption}
           className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/80 p-4 backdrop-blur-sm"
           onClick={() => setSelected(null)}
         >
