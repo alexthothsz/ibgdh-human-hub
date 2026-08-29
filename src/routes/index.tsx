@@ -286,6 +286,9 @@ function Index() {
         </div>
       </section>
 
+      {/* Galeria de Eventos e Impacto Social */}
+      <GalleryImpacto />
+
       {/* Últimos Artigos */}
       <section className="border-y border-border bg-secondary">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
