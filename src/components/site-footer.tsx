@@ -22,6 +22,7 @@ const KNOWLEDGE_LINKS = [
   { label: "Artigos", href: "/artigos" },
   { label: "Pesquisas", href: "/artigos" },
   { label: "Publicações", href: "/artigos" },
+  { label: "Notícias", href: "/noticias" },
   { label: "Contato", href: "/contato" },
 ];
 
