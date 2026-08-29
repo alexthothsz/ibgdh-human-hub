@@ -8,6 +8,7 @@ import {
   Search,
   TrendingUp,
 } from "lucide-react";
+import { GalleryImpacto } from "@/components/gallery-impacto";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -284,6 +285,9 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Galeria de Eventos e Impacto Social */}
+      <GalleryImpacto />
 
       {/* Últimos Artigos */}
       <section className="border-y border-border bg-secondary">
