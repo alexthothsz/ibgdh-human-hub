@@ -14,6 +14,7 @@ import { Route as ArtigosRouteImport } from './routes/artigos'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CursosRouteImport } from './routes/cursos'
 import { Route as DireitosEServicosRouteImport } from './routes/direitos-e-servicos'
+import { Route as NoticiasRouteImport } from './routes/noticias'
 import { Route as InstitutoPresidenciaRouteImport } from './routes/instituto.presidencia'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const DireitosEServicosRoute = DireitosEServicosRouteImport.update({
   path: '/direitos-e-servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NoticiasRoute = NoticiasRouteImport.update({
+  id: '/noticias',
+  path: '/noticias',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InstitutoPresidenciaRoute = InstitutoPresidenciaRouteImport.update({
   id: '/instituto/presidencia',
   path: '/instituto/presidencia',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
+  '/noticias': typeof NoticiasRoute
   '/instituto/presidencia': typeof InstitutoPresidenciaRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
+  '/noticias': typeof NoticiasRoute
   '/instituto/presidencia': typeof InstitutoPresidenciaRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
   '/direitos-e-servicos': typeof DireitosEServicosRoute
+  '/noticias': typeof NoticiasRoute
   '/instituto/presidencia': typeof InstitutoPresidenciaRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/cursos'
     | '/direitos-e-servicos'
+    | '/noticias'
     | '/instituto/presidencia'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/cursos'
     | '/direitos-e-servicos'
+    | '/noticias'
     | '/instituto/presidencia'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/cursos'
     | '/direitos-e-servicos'
+    | '/noticias'
     | '/instituto/presidencia'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   CursosRoute: typeof CursosRoute
   DireitosEServicosRoute: typeof DireitosEServicosRoute
+  NoticiasRoute: typeof NoticiasRoute
   InstitutoPresidenciaRoute: typeof InstitutoPresidenciaRoute
 }
 
@@ -145,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DireitosEServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/noticias': {
+      id: '/noticias'
+      path: '/noticias'
+      fullPath: '/noticias'
+      preLoaderRoute: typeof NoticiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/instituto/presidencia': {
       id: '/instituto/presidencia'
       path: '/instituto/presidencia'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   CursosRoute: CursosRoute,
   DireitosEServicosRoute: DireitosEServicosRoute,
+  NoticiasRoute: NoticiasRoute,
   InstitutoPresidenciaRoute: InstitutoPresidenciaRoute,
 }
 export const routeTree = rootRouteImport

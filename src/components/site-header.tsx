@@ -37,6 +37,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Artigos", href: "/artigos" },
       { label: "Pesquisas", href: "/artigos" },
       { label: "Publicações", href: "/artigos" },
+      { label: "Notícias", href: "/noticias" },
     ],
   },
   {
