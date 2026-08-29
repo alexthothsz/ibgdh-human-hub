@@ -166,14 +166,14 @@ export function GalleryImpacto() {
               <X className="size-5" aria-hidden="true" />
             </button>
             <img
-              src={ITEMS[selected].src}
-              alt={ITEMS[selected].alt}
+              src={ITEMS[selected]!.src}
+              alt={ITEMS[selected]!.alt}
               width={1024}
               height={768}
               className="max-h-[75vh] w-full object-contain bg-foreground/5"
             />
             <p className="p-4 text-center text-sm font-medium text-foreground sm:text-base">
-              {ITEMS[selected].caption}
+              {ITEMS[selected]!.caption}
             </p>
           </div>
         </div>
