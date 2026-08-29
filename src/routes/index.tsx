@@ -8,6 +8,7 @@ import {
   Search,
   TrendingUp,
 } from "lucide-react";
+import { GalleryImpacto } from "@/components/gallery-impacto";
 
 export const Route = createFileRoute("/")({
   head: () => ({
