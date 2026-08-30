@@ -142,6 +142,7 @@ function RootComponent() {
         >
           Pular para o conteúdo
         </a>
+        <AccessibilityBar />
         <SiteHeader />
         <main id="conteudo-principal" className="flex-1">
           <Outlet />
