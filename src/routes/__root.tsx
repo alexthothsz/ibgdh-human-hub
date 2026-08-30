@@ -149,6 +149,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
+        <VLibras />
       </div>
     </QueryClientProvider>
   );
