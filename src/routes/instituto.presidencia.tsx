@@ -162,7 +162,7 @@ function PresidenciaPage() {
             <div className="w-full overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
               <img
                 src={presidenteImg}
-                alt="Retrato oficial do Dr. Alexandre Silva de Souza, presidente do IBGDH"
+                alt="Retrato oficial do Dr. Fábio Jorge Dantas de Sousa, presidente do IBGDH"
                 width={1024}
                 height={1280}
                 className="aspect-[4/5] w-full object-cover"
