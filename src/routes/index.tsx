@@ -187,7 +187,13 @@ function Index() {
               </Button>
             </div>
           </div>
-          <div className="order-1 lg:order-2">
+          <div className="order-1 space-y-6 lg:order-2">
+            <img
+              src={logoCompleta.url}
+              alt="Logomarca do IBGDH — Instituto Brasil Global de Direitos Humanos, com o lema Dignidade, Justiça, Liberdade, Equidade e Humanidade"
+              loading="lazy"
+              className="w-full rounded-2xl border border-accent/30 bg-card p-4 shadow-sm"
+            />
             <img
               src="/images/quem-somos.jpg"
               alt="Ilustração de um grupo diverso de pessoas representando inclusão e direitos humanos"
