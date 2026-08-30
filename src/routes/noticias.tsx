@@ -93,7 +93,7 @@ const NEWS = [
   },
 ];
 
-const [FEATURED, ...GRID] = NEWS;
+const [FEATURED, ...GRID] = NEWS as [(typeof NEWS)[number], ...(typeof NEWS)[number][]];
 
 function NoticiasPage() {
   return (

@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
+import { AccessibilityBar } from "../components/accessibility-bar";
 
 function NotFoundComponent() {
   return (
@@ -141,6 +142,7 @@ function RootComponent() {
         >
           Pular para o conteúdo
         </a>
+        <AccessibilityBar />
         <SiteHeader />
         <main id="conteudo-principal" className="flex-1">
           <Outlet />
