@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { AccessibilityBar } from "../components/accessibility-bar";
+import { VLibras } from "../components/vlibras";
 
 function NotFoundComponent() {
   return (
