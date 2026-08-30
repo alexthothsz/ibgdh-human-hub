@@ -98,6 +98,34 @@
   --chart-5: oklch(0.645 0.246 16.439);
 }
 
+/* Tema de Alto Contraste (preto / amarelo / branco) — WCAG AAA */
+.high-contrast {
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0 0 0);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(0.9 0.19 100);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.17 0 0);
+  --secondary-foreground: oklch(0.9 0.19 100);
+  --muted: oklch(0.17 0 0);
+  --muted-foreground: oklch(0.95 0 0);
+  --accent: oklch(0.9 0.19 100);
+  --accent-foreground: oklch(0 0 0);
+  --destructive: oklch(0.7 0.22 30);
+  --destructive-foreground: oklch(0 0 0);
+  --border: oklch(0.9 0.19 100);
+  --input: oklch(0.9 0.19 100);
+  --ring: oklch(0.9 0.19 100);
+}
+
+.high-contrast img,
+.high-contrast video {
+  filter: contrast(1.15);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -108,5 +136,20 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Indicador de foco visível e consistente em todo o site */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-background),
+      0 0 0 4px var(--color-ring);
+    border-radius: var(--radius-md);
   }
 }
