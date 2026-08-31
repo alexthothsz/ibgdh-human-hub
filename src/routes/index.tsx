@@ -9,6 +9,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { GalleryImpacto } from "@/components/gallery-impacto";
+import logoCompleta from "@/assets/ibgdh-logo-completa.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
